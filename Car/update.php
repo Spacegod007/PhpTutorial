@@ -20,7 +20,7 @@
     $userId = isset($_GET['userId']) ? $_GET['userId'] : die("ERROR: userId not found");
 
 
-    include 'C:/Users/Jordi van Roij/Documents/PhpstormProjects/PhpTutorial/config/database.php';
+    include '../config/database.php';
 
     try {
         $query = "SELECT id, brand, type FROM car WHERE id = ? LIMIT 0,1";

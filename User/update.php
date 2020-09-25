@@ -18,7 +18,7 @@
     <?php
     $id = isset($_GET['id']) ? $_GET['id'] : die("ERROR: id not found");
 
-    include 'C:/Users/Jordi van Roij/Documents/PhpstormProjects/PhpTutorial/config/database.php';
+    include '../config/database.php';
 
     try {
         $query = "SELECT name FROM app_user WHERE id = ? LIMIT 0,1";

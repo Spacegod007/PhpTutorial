@@ -17,7 +17,7 @@
 
     <?php
     if ($_POST) {
-        include 'C:/Users/Jordi van Roij/Documents/PhpstormProjects/PhpTutorial/config/database.php';
+        include '../config/database.php';
         parse_str($_SERVER["QUERY_STRING"], $params);
 
         try {

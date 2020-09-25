@@ -21,7 +21,7 @@
     </div>
 
     <?php
-    include 'C:/Users/Jordi van Roij/Documents/PhpstormProjects/PhpTutorial/config/database.php';
+    include '../config/database.php';
 
     $action = isset($_GET['action']) ? $_GET['action'] : "";
 

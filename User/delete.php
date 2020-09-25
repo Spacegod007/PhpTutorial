@@ -1,5 +1,5 @@
 <?php
-include 'C:/Users/Jordi van Roij/Documents/PhpstormProjects/PhpTutorial/config/database.php';
+include '../config/database.php';
 
 try {
     $id = isset($_GET['id']) ? $_GET['id'] : die("ERROR: id not found");

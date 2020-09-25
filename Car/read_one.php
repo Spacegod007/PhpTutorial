@@ -24,13 +24,14 @@ if ($action == 'deleted') {
     echo "<div class='alert alert-success'>Record deleted</div>";
 }
 
-$userId = isset($_GET['id']) ? $_GET['id'] : die("ERROR: id not found");
-include 'C:/Users/Jordi van Roij/Documents/PhpstormProjects/PhpTutorial/config/database.php';
+$id = isset($_GET['id']) ? $_GET['id'] : die("ERROR: id not found");
+$userId = isset($_GET['userId']) ? $_GET['userId'] : die("ERROR: id not found");
+include '../config/database.php';
 
 try {
     $query = "SELECT id, brand, type FROM car WHERE id = ? LIMIT 0,1";
     $statement = $connection->prepare($query);
-    $statement->bindParam(1, $userId);
+    $statement->bindParam(1, $id);
     $statement->execute();
     $row = $statement->fetch();
 

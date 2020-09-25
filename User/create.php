@@ -17,8 +17,7 @@
 
     <?php
     if ($_POST) {
-        include 'C:/Users/Jordi van Roij/Documents/PhpstormProjects/PhpTutorial/config/database.php';
-
+        include '../config/database.php';
         try {
             $query = "INSERT INTO app_user SET name=:name";
             $statement = $connection->prepare($query);

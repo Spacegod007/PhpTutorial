@@ -29,8 +29,7 @@
     }
 
     $userId = isset($_GET['id']) ? $_GET['id'] : die("ERROR: id not found");
-    include 'C:/Users/Jordi van Roij/Documents/PhpstormProjects/PhpTutorial/config/database.php';
-
+    include '../config/database.php';
     try {
         $query = "SELECT id, name FROM app_user WHERE id = ? LIMIT 0,1";
         $statement = $connection->prepare($query);
@@ -68,7 +67,7 @@
 
         $amount = $statement->rowCount();
 
-        echo "<a href='../Car/create.php' class='btn btn-primary m-b-1em'>Add a car</a>";
+        echo "<a href='../Car/create.php?userId={$userId}' class='btn btn-primary m-b-1em'>Add a car</a>";
 
         if ($amount)
         {
