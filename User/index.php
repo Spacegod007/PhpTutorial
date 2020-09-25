@@ -12,6 +12,15 @@
         .m-b-1em{ margin-bottom:1em; }
     </style>
 
+    <script type="javascript">
+        function delete_user(id) {
+            var answer = confirm("Are you sure?");
+            if (answer) {
+                window.location = ";
+            }
+        }
+    </script>
+
 </head>
 <body>
 <div class="container">
@@ -48,7 +57,7 @@
                 . "<td>"
                 . "<a href='read_one.php?id={$id}' class='btn btn-info m-r-1em'>Read</a>"
                 . "<a href='update.php?id={$id}' class='btn btn-primary m-r-1em'>Edit</a>"
-                . "<a href='#' onclick='delete_user({$id})' class='btn btn-danger'>Delete</a>"
+                . "<a href='delete.php?id={$id}' onclick='delete_user({$id})' class='btn btn-danger'>Delete</a>"
                 . "</td></tr>";
         }
 
@@ -60,15 +69,6 @@
     ?>
 
 </div>
-
-<script type="javascript">
-    function delete_user(id) {
-        var answer = confirm("Are you sure?");
-        if (answer) {
-            window.location = "delete.php?id=" + id;
-        }
-    }
-</script>
 
 </body>
 </html>

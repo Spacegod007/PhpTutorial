@@ -11,7 +11,7 @@ try {
     $statement->bindParam(1, $id);
 
     if ($statement->execute()) {
-        header("Location: ../User/read_one?id={$userId}&action=deleted");
+        header("Location: ../User/read_one.php?id={$userId}&action=deleted");
     }
     else
     {

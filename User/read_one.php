@@ -82,7 +82,7 @@
                     . "<td>{$carId}</td><td>{$brand}</td><td>{$type}</td><td>"
                     . "<a href='../Car/read_one.php?id={$carId}&userId={$userId}' class='btn btn-info m-r-1em'>Read</a>"
                     . "<a href='../Car/update.php?id={$carId}&userId={$userId}' class='btn btn-primary m-r-1em'>Edit</a>"
-                    . "<a href='#' onclick='delete_car({$carId})' class='btn btn-danger'>Delete</a>"
+                    . "<a href='../Car/delete.php?id={$carId}&userId={$userId}' class='btn btn-danger'>Delete</a>"
                     . "</td></tr>";
             }
             $data .= "</table>";
@@ -97,15 +97,6 @@
     ?>
 
 </div>
-
-<script type="javascript">
-    function delete_car(id) {
-        var answer = confirm("Are you sure?");
-        if (answer) {
-            window.location = "../Car/delete.php?id=" + id;
-        }
-    }
-</script>
 
 </body>
 </html>
